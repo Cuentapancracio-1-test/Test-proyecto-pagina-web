@@ -23,7 +23,7 @@ description: "Compartir la experiencia y aprender de otras experiencias de mujer
       </div>
       <div class="grid gap-12">
         {% for post in collections.all | reverse %}
-          {{ blogcard({ post: post.data, url: post.url })}}
+   {% raw %}       {{ blogcard({ post: post.data, url: post.url })}} {% endraw %}
         {% endfor %}
       </div>
     </div>
