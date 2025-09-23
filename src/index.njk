@@ -51,7 +51,7 @@ path: "home"
     <div class="grid gap-12 ">
     {% raw %}  {%- from "./_includes/components/blogcard.njk" import blogcard -%} {% endraw %}
    {% raw %}   {% for item in BlogPreview.links %} {% endraw %}
-        {{ blogcard({ post: item })}}
+   {% raw %}     {{ blogcard({ post: item })}} {% endraw %}
 {% raw %}      {% endfor %} {% endraw %}
     </div>
   </div>
