@@ -49,10 +49,10 @@ path: "home"
       <p class="text-2xl font-semibold lg:mx-auto">En este espacio, te presentamos las historias más inspiradoras de mujeres que han superado situaciones de violencia familiar y han logrado salir adelante. Son historias de lucha, coraje y resiliencia que han tocado el corazón de muchas personas y que han servido de inspiración para otras mujeres que enfrentan situaciones similares.</p>
     </div>
     <div class="grid gap-12 ">
-      {%- from "./_includes/components/blogcard.njk" import blogcard -%}
-      {% for item in BlogPreview.links %}
+    {% raw %}  {%- from "./_includes/components/blogcard.njk" import blogcard -%} {% endraw %}
+   {% raw %}   {% for item in BlogPreview.links %} {% endraw %}
         {{ blogcard({ post: item })}}
-      {% endfor %}
+{% raw %}      {% endfor %} {% endraw %}
     </div>
   </div>
 </section>
